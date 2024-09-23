@@ -10,7 +10,15 @@ document.getElementById("Donate").addEventListener("click", () => {
   document.getElementById("accountBalance").innerText = account;
   document.getElementById("donateNohakhali").value = "";
 
-  console.log(totalTaka);
+  const history = document.getElementById("historyList");
+
+  const historyItem = document.createElement("div");
+  historyItem.classList.add("px-4", "py-4", "rounded-xl", "border", "mb-4");
+  historyItem.innerHTML = `
+  <span>${new Date().toLocaleDateString()}</span>  <span>${new Date().toLocaleTimeString()}</span>
+  <h1>${money}  taka donate for nahakhali </h1>
+`;
+  history.appendChild(historyItem);
 });
 
 // button toggle
@@ -21,6 +29,7 @@ historyBtn.addEventListener("click", () => {
   donateBtn.classList.remove("bg-lime-300");
   donateBtn.classList.add("bg-gray-300");
   document.getElementById("cardComponent").classList.add("hidden");
+  document.getElementById("historyList").classList.remove("hidden");
 });
 
 donateBtn.addEventListener("click", () => {
@@ -29,8 +38,9 @@ donateBtn.addEventListener("click", () => {
   donateBtn.classList.add("bg-lime-300");
 
   document.getElementById("cardComponent").classList.remove("hidden");
+  document.getElementById("historyList").classList.add("hidden");
 });
 
 document.getElementById("blogBtn").addEventListener("click", function () {
-  window.location.href = "./bog.html";
+  window.location.href = "././blog.html";
 });
