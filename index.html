@@ -12,21 +12,11 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-      .bgBlue {
-        background-color: lawngreen;
-      }
-
-      .bgGray {
-        background-color: gray;
-      }
-    </style>
   </head>
-  <body>
+  <body class="">
     <!-- Navbar -->
-    <header class="sticky top-0 text-center backdrop-blur-lg">
-      <div class="navbar bg-base-100 px-36 py-8 ">
+    <header class="sticky top-0 text-center backdrop-blur-lg mb-5">
+      <div class="navbar bg-red-50 px-4 md:px-36 py-8">
         <div class="navbar-start">
           <button
             id="blogBtn"
@@ -35,9 +25,9 @@
             Blog
           </button>
         </div>
-        <div class="navbar-center">
+        <div class="hidden md:navbar-center md:flex items-center">
           <img src="./assets/logo.png" alt="" />
-          <p class="ml-4 text-xl">Donate Bangladesh</p>
+          <p class="md:ml-4 md:text-xl w-56">Donate Bangladesh</p>
         </div>
         <div class="navbar-end">
           <img src="./assets/coin.png" alt="" />
@@ -47,19 +37,16 @@
         </div>
       </div>
 
-    
-      
-
-      <section class="mx-auto mt-4"></section>
+      <section class="mx-auto mt-4">
         <button
           id="donateBtn"
-          class="rounded-md px-3 py-2 font-medium w-[157px] bg-lime-300 "
+          class="rounded-md px-3 py-2 font-medium w-[157px] bg-lime-300"
         >
           Donation
         </button>
         <button
           id="historyBlue"
-          class="rounded-md px-3 py-2 font-medium w-[136px] bg-gray-300  "
+          class="rounded-md px-3 py-2 font-medium w-[136px] bg-gray-300"
         >
           History
         </button>
@@ -68,9 +55,7 @@
 
     <!-- Main -->
     <main>
-      
-
-      <div id="cardComponent">
+      <div id="cardComponent" class="mx-4">
         <!-- Modal -->
         <!-- Open the modal using ID.showModal() method -->
         <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
@@ -89,12 +74,12 @@
           </div>
         </dialog>
 
-        <section class="mx-48 mt-10 bg-slate-300 border rounded-lg p-5">
+        <section class="md:mx-48 mt-10 bg-white border rounded-lg p-5">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- image -->
             <div>
               <img
-                class="w-full h-[500px]"
+                class="md:w-full md:h-[500px]"
                 src="./assets/noakhali.png"
                 alt=""
               />
@@ -121,9 +106,9 @@
               <div>
                 <input
                   id="inputNohakhali"
-                  class="p-4 rounded-md w-[100%] my-5"
-                  type="number"
-                  placeholder="Enter amount"
+                  class="p-4 rounded-md w-[100%] my-5 border"
+                  type="text"
+                  placeholder="Write donate amount"
                   autocomplete="off"
                 />
                 <br />
@@ -137,10 +122,14 @@
             </div>
           </div>
         </section>
-        <section class="mx-48 mt-10 bg-slate-300 border rounded-lg p-5 mb-4">
-          <div class="grid grid-cols-2 gap-8">
+        <section class="md:mx-48 mt-10 bg-white border rounded-lg p-5 mb-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <img class="w-full h-[500px]" src="./assets/feni.png" alt="" />
+              <img
+                class="mdw-full md:h-[500px]"
+                src="./assets/feni.png"
+                alt=""
+              />
             </div>
 
             <div class="flex flex-col justify-center">
@@ -166,9 +155,9 @@
               <div>
                 <input
                   id="inputFeni"
-                  class="p-4 rounded-md w-[100%] my-5"
+                  class="p-4 rounded-md w-[100%] my-5 border"
                   type="text"
-                  placeholder="Enter amount"
+                  placeholder="Write donate amount"
                   autocomplete="off"
                 />
                 <br />
@@ -185,11 +174,11 @@
 
         <!-- quota movement section -->
 
-        <section class="mx-48 mt-10 bg-slate-300 border rounded-lg p-5 mb-4">
-          <div class="grid grid-cols-2 gap-8">
+        <section class="md:mx-48 mt-10 bg-white border rounded-lg p-5 mb-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <img
-                class="w-full h-[500px]"
+                class="md:w-full md:h-[500px]"
                 src="./assets/quota-protest.png"
                 alt=""
               />
@@ -216,9 +205,9 @@
               <div>
                 <input
                   id="inputQuota"
-                  class="p-4 rounded-md w-[100%] my-5"
+                  class="p-4 rounded-md w-[100%] my-5 border"
                   type="text"
-                  placeholder="Enter amount"
+                  placeholder="Write donate amount"
                   autocomplete="off"
                 />
                 <br />
@@ -235,10 +224,9 @@
       </div>
       <!-- History -->
 
-      <div id="historyList" class="hidden mx-36 mt-9"></div>
+      <div id="historyList" class="hidden mx-9 md:mx-36 mt-9"></div>
     </main>
     <script src="./js/utilities.js"></script>
     <script src="./js/dinateNohakhali.js"></script>
-    
   </body>
 </html>
