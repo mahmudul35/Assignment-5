@@ -18,9 +18,13 @@ document.getElementById("Donate").addEventListener("click", () => {
   );
 
   if (isNaN(nohakhaliInput) || nohakhaliInput <= 0) {
-    alert("Please give valid");
+    alert("Invalid Donation");
+    document.getElementById("inputNohakhali").value = "";
+    return;
   } else if (nohakhaliInput > accountBalance) {
     alert("Insufficient balance");
+    document.getElementById("inputNohakhali").value = "";
+    return;
   } else {
     let nohakhaliInputt = getValueByID("inputNohakhali");
 
@@ -33,7 +37,10 @@ document.getElementById("Donate").addEventListener("click", () => {
       accountBalance - nohakhaliInputt;
     document.getElementById("my_modal_5").showModal();
 
-    historyCreateFunction(nohakhaliInputt, "taka donate for nohakhali");
+    historyCreateFunction(
+      nohakhaliInputt,
+      "Taka is Donated for famine-2024 at Nohakhali, Bangladesh"
+    );
   }
 });
 
@@ -50,9 +57,13 @@ document.getElementById("feniDonateBtn").addEventListener("click", () => {
   );
 
   if (isNaN(feniInput) || feniInput <= 0) {
-    alert("Please give valid");
+    alert("Invalid Donation");
+    document.getElementById("inputFeni").value = "";
+    return;
   } else if (feniInput > accountBalance) {
     alert("Insufficient balance");
+    document.getElementById("inputFeni").value = "";
+    return;
   } else {
     let feniInputt = getValueByID("inputFeni");
 
@@ -65,7 +76,10 @@ document.getElementById("feniDonateBtn").addEventListener("click", () => {
       accountBalance - feniInputt;
     document.getElementById("my_modal_5").showModal();
 
-    historyCreateFunction(feniInputt, "taka donate for feni");
+    historyCreateFunction(
+      feniInputt,
+      "Taka is Donated for famine-2024 at Feni, Bangladesh"
+    );
   }
 });
 
@@ -82,9 +96,13 @@ document.getElementById("QuotaDonate").addEventListener("click", () => {
   );
 
   if (isNaN(quotaInput) || quotaInput <= 0) {
-    alert("Please give valid");
+    alert("Invalid Donation");
+    document.getElementById("inputQuota").value = "";
+    return;
   } else if (quotaInput > accountBalance) {
     alert("Insufficient balance");
+    document.getElementById("inputQuota").value = "";
+    return;
   } else {
     let quotaInputt = getValueByID("inputQuota");
 
@@ -97,7 +115,10 @@ document.getElementById("QuotaDonate").addEventListener("click", () => {
       accountBalance - quotaInputt;
     document.getElementById("my_modal_5").showModal();
 
-    historyCreateFunction(quotaInputt, "taka donate for quota");
+    historyCreateFunction(
+      quotaInputt,
+      "Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh"
+    );
   }
 });
 
