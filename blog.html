@@ -1,46 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- tailwind+daisyUI -->
+    <title>Blog Page</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
-      2rel="stylesheet"
+      rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <div class="collapse collapse-arrow bg-base-200">
-      <input type="radio" name="my-accordion-2" checked="checked" />
-      <div class="collapse-title text-xl font-medium">
-        Click to open this one and close others
+    <div id="blogPage" class="navbar bg-base-100 px-36 py-8">
+      <div class="navbar-start">
+        <button
+          id="homeButton"
+          class="btn btn-success font-bold w-[110px] bg-lime-300 border-none hover:bg-gray-400"
+        >
+          Home
+        </button>
       </div>
-      <div class="collapse-content">
-        <p>hello</p>
+      <div class="navbar-center">
+        <img src="./assets/logo.png" alt="" />
+        <p class="ml-4 text-xl">Donate Bangladesh</p>
       </div>
-    </div>
-    <div class="collapse collapse-arrow bg-base-200">
-      <input type="radio" name="my-accordion-2" />
-      <div class="collapse-title text-xl font-medium">
-        Click to open this one and close others
-      </div>
-      <div class="collapse-content">
-        <p>hello</p>
-      </div>
-    </div>
-    <div class="collapse collapse-arrow bg-base-200">
-      <input type="radio" name="my-accordion-2" />
-      <div class="collapse-title text-xl font-medium">
-        Click to open this one and close others
-      </div>
-      <div class="collapse-content">
-        <p>hello</p>
+      <div class="navbar-end">
+        <img src="./assets/coin.png" alt="" />
+        <p id="accountBalance" class="text-slate-400 font-medium ml-2">5500</p>
       </div>
     </div>
+    <div class="mx-44 mt-36">
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          Click to open this one and close others
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          Click to open this one and close others
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          Click to open this one and close others
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          Click to open this one and close others
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+    </div>
+    <script src="./js/blog.js"></script>
+    <script src="./js/utilities.js"></script>
     <script src="./js/dinateNohakhali.js"></script>
   </body>
 </html>

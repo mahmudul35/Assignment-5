@@ -25,8 +25,8 @@
   </head>
   <body>
     <!-- Navbar -->
-    <header class="sticky top-0">
-      <div class="navbar bg-base-100 px-36 py-8">
+    <header class="sticky top-0 text-center backdrop-blur-lg">
+      <div class="navbar bg-base-100 px-36 py-8 ">
         <div class="navbar-start">
           <button
             id="blogBtn"
@@ -46,24 +46,29 @@
           </p>
         </div>
       </div>
-    </header>
 
-    <!-- Main -->
-    <main>
-      <section class="flex justify-center items-center gap-8 mt-6">
+    
+      
+
+      <section class="mx-auto mt-4"></section>
         <button
           id="donateBtn"
-          class="rounded-md px-3 py-2 font-medium w-[157px] bg-lime-300"
+          class="rounded-md px-3 py-2 font-medium w-[157px] bg-lime-300 "
         >
           Donation
         </button>
         <button
           id="historyBlue"
-          class="rounded-md px-3 py-2 font-medium w-[136px] bg-gray-300"
+          class="rounded-md px-3 py-2 font-medium w-[136px] bg-gray-300  "
         >
           History
         </button>
       </section>
+    </header>
+
+    <!-- Main -->
+    <main>
+      
 
       <div id="cardComponent">
         <!-- Modal -->
@@ -85,7 +90,7 @@
         </dialog>
 
         <section class="mx-48 mt-10 bg-slate-300 border rounded-lg p-5">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- image -->
             <div>
               <img
@@ -95,10 +100,10 @@
               />
             </div>
             <!-- content -->
-            <div class="flex flex-col justify-center">
+            <div class="flex flex-col md:justify-center">
               <div class="flex gap-2">
                 <img src="./assets/coin.png" alt="" />
-                <p id="totalTaka">5400</p>
+                <p id="cardAmountNohakhali">5400</p>
               </div>
               <div>
                 <h1 class="font-bold text-xl my-4">
@@ -115,9 +120,9 @@
               </div>
               <div>
                 <input
-                  id="donateNohakhali"
+                  id="inputNohakhali"
                   class="p-4 rounded-md w-[100%] my-5"
-                  type="text"
+                  type="number"
                   placeholder="Enter amount"
                   autocomplete="off"
                 />
@@ -132,7 +137,7 @@
             </div>
           </div>
         </section>
-        <!-- <section class="mx-48 mt-10 bg-slate-300 border rounded-lg p-5 mb-4">
+        <section class="mx-48 mt-10 bg-slate-300 border rounded-lg p-5 mb-4">
           <div class="grid grid-cols-2 gap-8">
             <div>
               <img class="w-full h-[500px]" src="./assets/feni.png" alt="" />
@@ -141,7 +146,7 @@
             <div class="flex flex-col justify-center">
               <div class="flex gap-2">
                 <img src="./assets/coin.png" alt="" />
-                <p id="totalTaka">5400</p>
+                <p id="cardAmountFeni">5400</p>
               </div>
               <div>
                 <h1 class="font-bold text-xl my-4">
@@ -160,7 +165,7 @@
               </div>
               <div>
                 <input
-                  id="donateFeni"
+                  id="inputFeni"
                   class="p-4 rounded-md w-[100%] my-5"
                   type="text"
                   placeholder="Enter amount"
@@ -168,7 +173,7 @@
                 />
                 <br />
                 <button
-                  id="Donate"
+                  id="feniDonateBtn"
                   class="bg-lime-300 rounded-md px-3 py-2 font-medium w-[100%]"
                 >
                   Donate Now
@@ -176,9 +181,11 @@
               </div>
             </div>
           </div>
-        </section> -->
+        </section>
 
-        <!-- <section class="mx-48 mt-10 bg-slate-300 border rounded-lg p-5 mb-4">
+        <!-- quota movement section -->
+
+        <section class="mx-48 mt-10 bg-slate-300 border rounded-lg p-5 mb-4">
           <div class="grid grid-cols-2 gap-8">
             <div>
               <img
@@ -191,7 +198,7 @@
             <div class="flex flex-col justify-center">
               <div class="flex gap-2">
                 <img src="./assets/coin.png" alt="" />
-                <p id="totalTaka">5400</p>
+                <p id="cardAmountQuota">5400</p>
               </div>
               <div>
                 <h1 class="font-bold text-xl my-4">
@@ -208,7 +215,7 @@
               </div>
               <div>
                 <input
-                  id="donateQuota"
+                  id="inputQuota"
                   class="p-4 rounded-md w-[100%] my-5"
                   type="text"
                   placeholder="Enter amount"
@@ -216,7 +223,7 @@
                 />
                 <br />
                 <button
-                  id="Donate"
+                  id="QuotaDonate"
                   class="bg-lime-300 rounded-md px-3 py-2 font-medium w-[100%]"
                 >
                   Donate Now
@@ -224,12 +231,14 @@
               </div>
             </div>
           </div>
-        </section> -->
+        </section>
       </div>
       <!-- History -->
 
       <div id="historyList" class="hidden mx-36 mt-9"></div>
     </main>
+    <script src="./js/utilities.js"></script>
     <script src="./js/dinateNohakhali.js"></script>
+    
   </body>
 </html>
