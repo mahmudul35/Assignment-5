@@ -1,7 +1,3 @@
-// creat common function
-// let mainAccountBalance = parseFloat(
-//   document.getElementById("accountBalance").innerText
-// );
 document.getElementById("blogBtn").addEventListener("click", function () {
   window.location.href = "./blog.html";
 });
@@ -131,13 +127,14 @@ historyBtn.addEventListener("click", () => {
   donateBtn.classList.add("bg-gray-300");
   document.getElementById("cardComponent").classList.add("hidden");
   document.getElementById("historyList").classList.remove("hidden");
+  document.getElementById("footer").classList.add("hidden");
 });
 
 donateBtn.addEventListener("click", () => {
   historyBtn.classList.remove("bg-lime-300");
   donateBtn.classList.remove("bg-gray-300");
   donateBtn.classList.add("bg-lime-300");
-
   document.getElementById("cardComponent").classList.remove("hidden");
   document.getElementById("historyList").classList.add("hidden");
+  document.getElementById("footer").classList.remove("hidden");
 });
