@@ -1,9 +1,9 @@
 let history = document.getElementById("historyList");
-
+//reusable function 1
 function getValueByID(id) {
   return parseFloat(document.getElementById(id).value);
 }
-
+//reusable function 2
 function historyCreateFunction(balance, text) {
   let historyItem = document.createElement("div");
   historyItem.classList.add("px-4", "py-4", "rounded-xl", "border", "mb-4");
